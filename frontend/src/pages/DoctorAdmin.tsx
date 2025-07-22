@@ -1,10 +1,24 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FaCalendarAlt, FaClock, FaTooth, FaUser, FaCheck, FaTimes, 
+  FaCalendarAlt, FaClock, FaTooth, FaCheck, FaTimes, 
   FaSearch, FaFilter, FaUserMd, FaChartPie, FaBell, FaCog
 } from 'react-icons/fa';
 import { TbDental } from 'react-icons/tb';
+import { animate, useMotionValue, useTransform } from 'framer-motion';
+
+// Create this helper component inside your DoctorAdmin component (before the return statement)
+const AnimatedCounter = ({ value }: { value: number }) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  
+  useEffect(() => {
+    const animation = animate(count, value, { duration: 1 });
+    return () => animation.stop();
+  }, [value]);
+
+  return <motion.span>{rounded}</motion.span>;
+};
 
 // Mock appointment data
 const mockAppointments = [
@@ -208,14 +222,9 @@ const DoctorAdmin = () => {
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-500">Confirmed</p>
-                <motion.p 
-                  initial={{ number: 0 }}
-                  animate={{ number: stats.confirmed }}
-                  transition={{ duration: 1 }}
-                  className="text-3xl font-bold text-blue-600"
-                >
-                  {stats.confirmed}
-                </motion.p>
+              <p className="text-3xl font-bold text-blue-600">
+  <AnimatedCounter value={stats.confirmed} />
+</p>
               </div>
               <div className="bg-blue-100 p-3 rounded-lg">
                 <FaCheck className="text-blue-600 text-2xl" />
@@ -230,18 +239,13 @@ const DoctorAdmin = () => {
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-500">Pending</p>
-                <motion.p 
-                  initial={{ number: 0 }}
-                  animate={{ number: stats.pending }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  className="text-3xl font-bold text-yellow-600"
-                >
-                  {stats.pending}
-                </motion.p>
-              </div>
+              <p className="text-3xl font-bold text-blue-600">
+  <AnimatedCounter value={stats.confirmed} />
+</p>
               <div className="bg-yellow-100 p-3 rounded-lg">
                 <FaClock className="text-yellow-600 text-2xl" />
               </div>
+            </div>
             </div>
           </motion.div>
           
@@ -252,14 +256,9 @@ const DoctorAdmin = () => {
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-500">Completed</p>
-                <motion.p 
-                  initial={{ number: 0 }}
-                  animate={{ number: stats.completed }}
-                  transition={{ duration: 1, delay: 0.4 }}
-                  className="text-3xl font-bold text-green-600"
-                >
-                  {stats.completed}
-                </motion.p>
+               <p className="text-3xl font-bold text-blue-600">
+  <AnimatedCounter value={stats.confirmed} />
+</p>
               </div>
               <div className="bg-green-100 p-3 rounded-lg">
                 <FaCalendarAlt className="text-green-600 text-2xl" />
@@ -274,14 +273,9 @@ const DoctorAdmin = () => {
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-500">Cancelled</p>
-                <motion.p 
-                  initial={{ number: 0 }}
-                  animate={{ number: stats.cancelled }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                  className="text-3xl font-bold text-red-600"
-                >
-                  {stats.cancelled}
-                </motion.p>
+             <p className="text-3xl font-bold text-blue-600">
+  <AnimatedCounter value={stats.confirmed} />
+</p>
               </div>
               <div className="bg-red-100 p-3 rounded-lg">
                 <FaTimes className="text-red-600 text-2xl" />
