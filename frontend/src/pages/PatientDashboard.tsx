@@ -52,6 +52,18 @@ const PatientDashboard = () => {
     return () => clearTimeout(timer);
   }, []);
 
+useEffect(() => {
+  const upcomingConfirmed = appointments
+    .filter(appt => appt.status === 'Confirmed')
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+  if (upcomingConfirmed.length > 0) {
+    setNextCheckup(upcomingConfirmed[0].date);
+  } else {
+    setNextCheckup('Not Scheduled');
+  }
+}, [appointments]);
+
   const handleCancel = (id: number) => {
     setAppointments(appointments.filter(appt => appt.id !== id));
   };
