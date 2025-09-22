@@ -8,7 +8,7 @@ import {
    FaDownload, FaEdit
 } from 'react-icons/fa';
 import { GiToothbrush } from 'react-icons/gi';
-import { TbDental, TbCalendarStats, TbReportMedical } from 'react-icons/tb';
+import { TbDental, TbCalendarStats } from 'react-icons/tb';
 
 // Animated Counter Component
 const AnimatedCounter = ({ value }: { value: number }) => {
