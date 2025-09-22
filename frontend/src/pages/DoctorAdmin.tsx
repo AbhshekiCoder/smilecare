@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, useTransform, animate } from 'framer-motion';
 import { 
   FaCalendarAlt, FaClock, FaTooth, FaCheck, FaTimes, 
-  FaSearch, FaFilter, FaUserMd, FaChartPie, FaBell, FaCog,
-  FaUser, FaPhone, FaEnvelope, FaMapMarkerAlt, FaFileMedical,
-  FaMoneyBillWave, FaStar, FaProcedures, FaTeeth, 
-  FaCrown, FaTeethOpen, FaDownload, FaEdit, FaTrash
+  FaSearch, FaFilter,  FaChartPie, FaBell, FaCog,
+  FaUser, FaPhone, FaEnvelope,  FaFileMedical,
+  FaMoneyBillWave,  FaProcedures, FaTeeth, 
+   FaDownload, FaEdit
 } from 'react-icons/fa';
 import { GiToothbrush } from 'react-icons/gi';
 import { TbDental, TbCalendarStats, TbReportMedical } from 'react-icons/tb';
@@ -234,6 +234,7 @@ const DoctorAdmin = () => {
       transition: { duration: 0.5 }
     }
   };
+
 
   return (
     <div className="bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50 min-h-screen">
