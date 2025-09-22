@@ -1,8 +1,7 @@
 // src/pages/About.tsx
 import { motion } from 'framer-motion';
-import { FaHeartbeat, FaSmile, FaUsers, FaAward, FaCheck } from 'react-icons/fa';
+import { FaHeartbeat, FaSmile, FaUsers, FaAward, FaCheck, FaTooth } from 'react-icons/fa';
 import { IoIosFlask } from 'react-icons/io';
-import { GiTooth } from 'react-icons/gi';
 
 const About = () => {
   return (
@@ -37,7 +36,7 @@ const About = () => {
             >
               <div className="bg-white rounded-xl shadow-lg p-6 border border-blue-100">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <GiTooth className="text-blue-600 text-2xl" />
+                  <FaTooth className="text-blue-600 text-2xl" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800">15+ Years Experience</h3>
               </div>
@@ -98,7 +97,11 @@ const About = () => {
                 className="relative flex flex-col md:flex-row items-center"
               >
                 <div className="md:w-1/2 md:pr-12 md:text-right">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Dental clinic interior"
+                    className="rounded-xl shadow-lg w-full h-64 object-cover"
+                  />
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-x-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white mt-8 md:mt-0 z-10"></div>
                 <div className="md:w-1/2 md:pl-12 mt-8 md:mt-0">
@@ -127,7 +130,11 @@ const About = () => {
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-x-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white mt-8 md:mt-0 z-10"></div>
                 <div className="md:w-1/2 md:pl-12">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Dental equipment"
+                    className="rounded-xl shadow-lg w-full h-64 object-cover"
+                  />
                 </div>
               </motion.div>
 
@@ -140,7 +147,11 @@ const About = () => {
                 className="relative flex flex-col md:flex-row items-center"
               >
                 <div className="md:w-1/2 md:pr-12 md:text-right">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Modern dental facility"
+                    className="rounded-xl shadow-lg w-full h-64 object-cover"
+                  />
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-x-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white mt-8 md:mt-0 z-10"></div>
                 <div className="md:w-1/2 md:pl-12 mt-8 md:mt-0">
@@ -169,7 +180,11 @@ const About = () => {
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-x-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white mt-8 md:mt-0 z-10"></div>
                 <div className="md:w-1/2 md:pl-12">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Dental team"
+                    className="rounded-xl shadow-lg w-full h-64 object-cover"
+                  />
                 </div>
               </motion.div>
             </div>
@@ -211,7 +226,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8 border border-blue-100 text-center hover:shadow-xl transition-shadow"
+              className="bg-white rounded-xl shadow-lg p-8 border border-blue-100 text-center hover:shadow-xl transition-shadow duration-300"
             >
               <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FaHeartbeat className="text-blue-600 text-3xl" />
@@ -228,7 +243,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8 border border-blue-100 text-center hover:shadow-xl transition-shadow"
+              className="bg-white rounded-xl shadow-lg p-8 border border-blue-100 text-center hover:shadow-xl transition-shadow duration-300"
             >
               <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <IoIosFlask className="text-blue-600 text-3xl" />
@@ -245,7 +260,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8 border border-blue-100 text-center hover:shadow-xl transition-shadow"
+              className="bg-white rounded-xl shadow-lg p-8 border border-blue-100 text-center hover:shadow-xl transition-shadow duration-300"
             >
               <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FaSmile className="text-blue-600 text-3xl" />
@@ -279,7 +294,7 @@ const About = () => {
               </p>
               
               <div className="space-y-6">
-                <div className="flex">
+                <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
                       <FaCheck className="text-blue-600" />
@@ -293,7 +308,7 @@ const About = () => {
                   </div>
                 </div>
                 
-                <div className="flex">
+                <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
                       <FaCheck className="text-blue-600" />
@@ -307,7 +322,7 @@ const About = () => {
                   </div>
                 </div>
                 
-                <div className="flex">
+                <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
                       <FaCheck className="text-blue-600" />
@@ -321,7 +336,7 @@ const About = () => {
                   </div>
                 </div>
                 
-                <div className="flex">
+                <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
                       <FaCheck className="text-blue-600" />
@@ -344,9 +359,11 @@ const About = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl w-full h-96 overflow-hidden">
-                <div className="absolute inset-0 bg-gray-200 border-2 border-dashed rounded-2xl" />
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Dental technology"
+                className="rounded-2xl shadow-xl w-full h-96 object-cover"
+              />
               <div className="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-xl p-6 w-64">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Our Technology Lab</h3>
                 <p className="text-gray-600">
@@ -354,6 +371,77 @@ const About = () => {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold text-gray-800"
+            >
+              Meet Our Expert Team
+            </motion.h2>
+            <motion.div 
+              initial={{ width: 0 }}
+              animate={{ width: 100 }}
+              transition={{ duration: 0.8 }}
+              className="h-1 bg-blue-500 mx-auto mt-4"
+            ></motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                name: "Dr. Sarah Johnson",
+                role: "Founder & Chief Dentist",
+                image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                experience: "15+ years"
+              },
+              {
+                name: "Dr. Michael Chen",
+                role: "Orthodontics Specialist",
+                image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                experience: "12+ years"
+              },
+              {
+                name: "Dr. Emily Rodriguez",
+                role: "Pediatric Dentistry",
+                image: "https://images.unsplash.com/photo-1594824947933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                experience: "10+ years"
+              },
+              {
+                name: "Dr. James Wilson",
+                role: "Oral Surgery",
+                image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                experience: "14+ years"
+              }
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
+                  <p className="text-blue-600 font-medium">{member.role}</p>
+                  <p className="text-gray-600 text-sm mt-2">{member.experience} experience</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -381,9 +469,13 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-4 px-12 rounded-full shadow-lg text-lg inline-block transition duration-300 transform hover:scale-105">
               Book Your Appointment
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white/10 font-bold py-4 px-12 rounded-full text-lg transition duration-300">
+              Learn More
             </button>
           </motion.div>
         </div>
